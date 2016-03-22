@@ -2,7 +2,7 @@ class Class
   def self.hi
     puts "Hello World!"
   end
-  
+
   def acc!(*args)
     args.each do |arg|
       self.class_eval("def #{arg};@#{arg};end")
@@ -17,7 +17,7 @@ class Class
   end
 
   def init!(*args) # init! :a, :b, :c
-    param = body = ""
+    param = body = methods = ""
     args.each do |var|
       param += "#{var}"
       body += "@#{var}=#{var};"
